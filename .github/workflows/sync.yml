@@ -41,7 +41,7 @@ jobs:
           test_mode: false
       
       - name: Sync upstream changes for branch3
-        id: sync2
+        id: sync3
         uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
         with:
           upstream_sync_repo: FongMi/TV
