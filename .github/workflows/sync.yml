@@ -19,7 +19,11 @@ jobs:
       - name: Checkout target repo
         uses: actions/checkout@v3
 
-      # Step 2: run the sync action for each branch
+      # Step 2: Fetch all branches
+      - name: Fetch all branches
+        run: git fetch --all
+
+      # Step 3: run the sync action for each branch
       - name: Sync upstream changes for branch1
         id: sync1
         uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
